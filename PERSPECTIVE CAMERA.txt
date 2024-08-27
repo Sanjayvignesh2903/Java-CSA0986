@@ -1,0 +1,41 @@
+package application;  
+import javafx.application.Application;  
+import javafx.scene.Group;  
+import javafx.scene.PerspectiveCamera;  
+import javafx.scene.Scene;  
+import javafx.scene.paint.Color;  
+import javafx.scene.shape.Box;  
+import javafx.stage.Stage;  
+public class Ane_3d extends Application{  
+@Override  
+public void start(Stage primaryStage) throws Exception {  
+    
+    Box b = new Box();  
+    
+      
+    
+    b.setHeight(100);  
+    b.setWidth(100);  
+    b.setDepth(400);  
+    b.setTranslateX(200);  
+    b.setTranslateY(200);  
+    b.setTranslateZ(400);  
+      
+    
+    PerspectiveCamera pc = new PerspectiveCamera();  
+    pc.setTranslateX(100);  
+    pc.setTranslateY(100);  
+    pc.setTranslateZ(50);  
+      //Configuring Group, Scene and Stage  
+    Group root = new Group();  
+    root.getChildren().addAll(b);  
+    Scene scene = new Scene(root,450,350,Color.LIMEGREEN);  
+    scene.setCamera(pc);  
+    primaryStage.setScene(scene);  
+    primaryStage.setTitle("Box Example");  
+    primaryStage.show();  
+}  
+public static void main(String[] args) {  
+    launch(args);  
+}  
+}

@@ -1,0 +1,28 @@
+class Multithread extends Thread{
+
+
+public void run(){
+try{
+System.out.println("Thread "+Thread.currentThread().getId()+" is running");
+}catch(Exception e){
+	System.out.println("Error!");
+}
+
+}
+
+}
+class abcd{
+public static void main(String[] args){
+	int i,n=5;
+	for(i=0;i<n;i++){
+		
+	
+Multithread s = new Multithread();
+
+
+s.start();
+}
+}
+}
+
+
